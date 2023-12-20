@@ -7,6 +7,7 @@ SDL_Window* window;
 SDL_Renderer* render;
 SDL_Renderer* bgrender;
 SDL_Texture* texture;
+SDL_Renderer* chrender;
 SDL_Event event;
 int gameRunning;
 int initGame();
@@ -17,8 +18,8 @@ player main_player;
 int main(int argv, char* args[])
 {
 	initGame();
-	mapMatrix[0][0] = 1;
-	mapMatrix[0][1] = 1;
+	mapMatrix[0][0] = 2;
+	mapMatrix[0][1] = 2;
 	printMap();
 	
 

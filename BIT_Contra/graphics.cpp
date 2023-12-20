@@ -4,6 +4,11 @@
 #include<stdio.h>
 
 int temp = 0;
+//mapMatrixµÄÖµ
+//0-¿Õ
+//1-player
+//2-¿é1
+
 int initSDL()
 {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
@@ -19,6 +24,7 @@ int initSDL()
 	}
 	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	bgrender = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	chrender = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	int imgFlags = IMG_INIT_PNG;
 	if (!(IMG_Init(imgFlags) & imgFlags))
 	{
@@ -65,14 +71,24 @@ int renderMap(SDL_Renderer* renderer, SDL_Texture* tmp_texture)
 	{
 		for (int j = 0; j < MATRIX_HEIGHT; j++)
 		{
-			if (mapMatrix[i][j] == 1 && temp != 1)
+			if (mapMatrix[i][j] == 2 )
 			{
-				loadTexture("tb.png");
-				updateRender(render, texture, j * BLOCK_SIZE, i * BLOCK_SIZE);
+				if (temp != mapMatrix[i][j])
+				{
+					loadTexture("image/tb.png");
+					updateRender(render, texture, j * BLOCK_SIZE, i * BLOCK_SIZE);
+				}
+				else
+				{
+					updateRender(render, texture, j * BLOCK_SIZE, i * BLOCK_SIZE);
+				}
 			}
-			else if (mapMatrix[i][j] == 1 && temp == 1)
+			else if (mapMatrix[i][j] == 1)
 			{
-				updateRender(render, texture, j * BLOCK_SIZE, i * BLOCK_SIZE);
+				if (main_player.dx == 0)
+				{
+					loadTexture("image/player.png");
+				}
 			}
 		}
 	}

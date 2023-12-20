@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BIT_Contra", "BIT_Contra\BIT_Contra.vcxproj", "{683F763A-3FA3-468A-AEB4-C3E92FE24829}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Debug|x64.ActiveCfg = Debug|x64
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Debug|x64.Build.0 = Debug|x64
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Debug|x86.ActiveCfg = Debug|Win32
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Debug|x86.Build.0 = Debug|Win32
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Release|x64.ActiveCfg = Release|x64
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Release|x64.Build.0 = Release|x64
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Release|x86.ActiveCfg = Release|Win32
+		{683F763A-3FA3-468A-AEB4-C3E92FE24829}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5716097-8EA7-4436-B71C-398CC7E3B5C0}
+	EndGlobalSection
+EndGlobal

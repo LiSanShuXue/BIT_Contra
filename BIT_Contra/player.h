@@ -20,4 +20,5 @@ int restoreHP();
 int addLives();
 int minusLives();
 int move();
-
+int setPlayer();
+player initPlayer(int atk_num, int hp_num, int lives_num);

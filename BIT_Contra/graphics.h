@@ -12,12 +12,17 @@ extern SDL_Renderer* bgrender;
 extern SDL_Renderer* render;
 extern SDL_Renderer* chrender;
 extern SDL_Texture* texture;
+extern SDL_Texture* ptexture;
+extern int frameNum;
+extern int attackNum;
 
 extern int mapMatrix[MATRIX_WIDTH][MATRIX_HEIGHT];
-extern player main_player;
+extern player ryu;
 
 int initSDL();
-int loadTexture(const char* filename);
+SDL_Texture* loadTexture(const char* filename);
 int setRenderer(const char* filename, int x, int y, int width, int height);
 int updateRender(SDL_Renderer* renderer, SDL_Texture* tmp_texture, int x, int y);
 int renderMap(SDL_Renderer* renderer, SDL_Texture* tmp_texture);
+int loadCharacter(const char* filename);
+void drawAttack();
